@@ -2,21 +2,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* css structure
+selectors: id, class, tag, custom attribute {
+  property: value;
+}
+#home{}
+.item{}
+h4{}
+[class="item"]
+[id="home"]
+.form-field[data-invalid="true"]{}
+*/
+html {
+  /* 100% = 16px
+    ?% = 10px
+    => 10 * 100 / 16 =  62.5%
+  */
+  font-size: 62.5%;
+}
+:root {
+  font-size: 62.5%;
+}
+.book-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-@layer base {
-  body {
-    font-family: "Poppins", sans-serif;
-  }
-}
-input {
-  outline: none;
-}
-input,
-button,
-select,
-textarea {
-  font: inherit;
-}
-.l-container {
-  max-width: 1170px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
